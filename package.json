@@ -6,7 +6,6 @@
     "start": "next start"
   },
   "dependencies": {
-    "@iconify/react": "^4.1.1",
     "@supabase/auth-helpers-nextjs": "latest",
     "@supabase/supabase-js": "latest",
     "autoprefixer": "10.4.15",
