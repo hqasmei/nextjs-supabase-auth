@@ -1,7 +1,7 @@
 import { createRouteHandlerClient } from "@supabase/auth-helpers-nextjs";
 import { cookies } from "next/headers";
 import { NextResponse } from "next/server";
-
+import { getURL } from "@/lib/utils";
 export const dynamic = "force-dynamic";
 
 export async function POST(request: Request) {
@@ -13,7 +13,7 @@ export async function POST(request: Request) {
   const { data, error } = await supabase.auth.signInWithOtp({
     email: email,
     options: {
-      emailRedirectTo: "http://localhost:3000/auth/callback",
+      emailRedirectTo: `${getURL()}auth/callback/`,
     },
   });
 
